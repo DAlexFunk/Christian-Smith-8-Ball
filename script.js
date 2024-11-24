@@ -35,7 +35,7 @@ const laughs = [
   new Audio("./src/painSigh.wav"),
   new Audio("./src/roar.wav"),
   new Audio("./src/babyTalk.wav"),
-  new Audio("./src/hungryman.wav"),
+  new Audio("./src/hungryMan.wav"),
 ];
 const options = [
   // Positive
