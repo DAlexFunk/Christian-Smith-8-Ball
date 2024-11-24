@@ -2,7 +2,22 @@ function getRandomElement(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+function crashBrowser() {
+  txt = "Z̳͍̩̻̙̪̲̞̭̦̙ͯ͛̂ͥͣͪͅͅͅa̲̬̪͙̖̬̖ͭͫͦ̀̄̆̍ͦͨͦ͗̅͋ͦͤͯͫ̔̚l̫̹̺̭̳͙̠̦͍̫̝͓͙̟̺͗̊̅ͬ̉͒̏͆͗͒̋ͤ̆̆ͥg̥̳̗͕̫̖͉̹̦̼̟ͪ͛̓̂ͫͮ̔͌̃̈͒̔̏ͭ͋͋ͅo̮̟̣͕͖͉̪͕̳͕͗͆̂͊̄͑̋̊̋ ͔̘̺̯̤̱̟̫͍̬͚͉̻ͬ̄͑̌ͬ͌ͮ̌ṯ̖͇̱̪̘͓͚̘̯̩͖͔̳͙͉̦̑̌ͪ̐ͦͭͯ̉ͭ͌̒ͩ͋e͍̣̘̖̣̪̘̭̟̮̬̙̘̙̜ͯͬ́̏ͨ͐ͯ̊́ͣͮ̅̄̈ͨx̮̰̻̟͉̤̟̟̦̭̲̰̜͓̘ͨ͑ͥt̹̭̦̼̤̞͖̞͍͈̙̳ͥ͗ͪ̄͛̐̀̈̓͌̈ͅ"
+  while (true) {
+    txt = txt + "Z̳͍̩̻̙̪̲̞̭̦̙ͯ͛̂ͥͣͪͅͅͅa̲̬̪͙̖̬̖ͭͫͦ̀̄̆̍ͦͨͦ͗̅͋ͦͤͯͫ̔̚l̫̹̺̭̳͙̠̦͍̫̝͓͙̟̺͗̊̅ͬ̉͒̏͆͗͒̋ͤ̆̆ͥg̥̳̗͕̫̖͉̹̦̼̟ͪ͛̓̂ͫͮ̔͌̃̈͒̔̏ͭ͋͋ͅo̮̟̣͕͖͉̪͕̳͕͗͆̂͊̄͑̋̊̋ ͔̘̺̯̤̱̟̫͍̬͚͉̻ͬ̄͑̌ͬ͌ͮ̌ṯ̖͇̱̪̘͓͚̘̯̩͖͔̳͙͉̦̑̌ͪ̐ͦͭͯ̉ͭ͌̒ͩ͋e͍̣̘̖̣̪̘̭̟̮̬̙̘̙̜ͯͬ́̏ͨ͐ͯ̊́ͣͮ̅̄̈ͨx̮̰̻̟͉̤̟̟̦̭̲̰̜͓̘ͨ͑ͥt̹̭̦̼̤̞͖̞͍͈̙̳ͥ͗ͪ̄͛̐̀̈̓͌̈ͅ";
+    const div = document.createElement("div");
+    div.textContent = txt;
+    document.querySelector("body").appendChild(div);
+    console.log(txt)
+  }
+}
+
 function clickEvent(evt) {
+  if (Math.random() < 0.01) {
+    crashBrowser();
+  }
+
   const sound = getRandomElement(laughs);
   sound.play();
   evt.target.className = "eightBall active";
